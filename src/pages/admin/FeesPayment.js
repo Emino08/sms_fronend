@@ -11,16 +11,16 @@ const TabbedInterface = () => {
 
   return (
     <div className="container mx-auto mt-8">
-      <div className="flowbite bg-white border rounded-lg shadow-xl">
+      <div className="flowbite">
         <div className="flowbite-tabs">
           <ul className="flex">
             <li
               onClick={() => tabClickHandler("feesPaymentForm")}
               className={`cursor-pointer p-4 ${
                 activeTab === "feesPaymentForm"
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-200 text-gray-700"
-              } hover:bg-blue-500 hover:text-white transition-all duration-200`}
+                  ? "text-gray-600 border-b-2 border-gray-600"
+                  : "text-gray-700"
+              } hover:text-gray-600 hover:border-gray-300 transition-all duration-200`}
             >
               Fee Payment Form
             </li>
@@ -28,9 +28,9 @@ const TabbedInterface = () => {
               onClick={() => tabClickHandler("feesPaymentReport")}
               className={`cursor-pointer p-4 ${
                 activeTab === "feesPaymentReport"
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-200 text-gray-700"
-              } hover:bg-blue-500 hover:text-white transition-all duration-200`}
+                  ? "text-gray-600 border-b-2 border-gray-600"
+                  : "text-gray-700"
+              } hover:text-gray-600 hover:border-gray-300 transition-all duration-200`}
             >
               Fee Payment Report
             </li>

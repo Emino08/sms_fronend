@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  paymentReport: [],
   loading: false,
   error: null,
   response: null,
@@ -8,7 +9,7 @@ const initialState = {
 };
 
 const feesPaymentSlice = createSlice({
-  name: "feesPayment",
+  name: "fees",
   initialState,
   reducers: {
     paymentRequest: (state) => {
@@ -22,6 +23,7 @@ const feesPaymentSlice = createSlice({
       state.error = null;
       state.response = action.payload;
       state.paymentStatus = "succeeded";
+      state.paymentReport = action.payload;
     },
     paymentFailed: (state, action) => {
       state.loading = false;
@@ -41,6 +43,15 @@ const feesPaymentSlice = createSlice({
       state.response = null;
       state.paymentStatus = "idle";
     },
+    // Add an action to set the payment report data.
+    setPaymentReport: (state, action) => {
+      state.paymentReport = action.payload;
+    },
+
+    // Add an action to clear the payment report data.
+    clearPaymentReport: (state) => {
+      state.paymentReport = [];
+    },
   },
 });
 
@@ -50,6 +61,8 @@ export const {
   paymentFailed,
   paymentError,
   resetPaymentStatus,
+  setPaymentReport,
+  clearPaymentReport,
 } = feesPaymentSlice.actions;
 
 export const feesPaymentReducer = feesPaymentSlice.reducer;
