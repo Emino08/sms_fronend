@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99db1d61-8106-4374-b30f-fa3226b048cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/FeedBack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/admin/academicYearRelated/AcademicYear.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/exam/ExamDashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/exam/ExamPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/exam/ExamSideBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/academicYearRelated/academicYearHandle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/academicYearRelated/academicYearSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/examRelated/examHandle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/examRelated/examSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sms_frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sms_frontend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/admin/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/AdminDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/admin/FeePaymentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/feesPaymentRelated/FeePaymentForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/admin/FeePaymentReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/feesPaymentRelated/FeePaymentReport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/admin/FeesPayment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/feesPaymentRelated/FeesPayment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/admin/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/admin/studentRelated/AddStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/studentRelated/AddStudent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/admin/studentRelated/SeeComplains.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/studentRelated/SeeComplains.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/student/StudentComplain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/student/StudentComplain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/student/StudentSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/student/StudentSideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/teacher/TeacherSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/teacher/TeacherSideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/teacher/TeacherViewStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/teacher/TeacherViewStudent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2YMsV7jPTfNB3XaPXqGk6L5Cq9D" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/EMMANUEL KOROMA/Documents/venv",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99db1d61-8106-4374-b30f-fa3226b048cc" name="Changes" comment="" />
+      <created>1700346817096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700346817096</updated>
+      <workItem from="1700346824652" duration="67000" />
+      <workItem from="1700346942868" duration="3534000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserDetails } from "../../redux/userRelated/userHandle";
-import { makePayment } from "../../redux/feesPaymentRelated/feesPaymentHandle";
+import { getUserDetails } from "../../../redux/userRelated/userHandle";
+import { makePayment } from "../../../redux/feesPaymentRelated/feesPaymentHandle";
 
 const FeePaymentForm = () => {
   let initialFormData;
@@ -26,6 +26,7 @@ const FeePaymentForm = () => {
   );
 
   const handleSearch = () => {
+    console.log("Search clicked");
     const studentId = formData.studentId;
     const address = "Student";
 
@@ -118,7 +119,7 @@ const FeePaymentForm = () => {
 
   return (
     <div className="flex justify-center h-screen">
-      <form onSubmit={handleSearch} className="p-8 min-w-[300px]">
+      <form onSubmit={handleSubmit} className="p-8 min-w-[300px]">
         <div className="mb-6">
           <label htmlFor="default-search" className="mb-2 text-sm font-medium">
             Enter Studen ID
@@ -153,7 +154,7 @@ const FeePaymentForm = () => {
             />
             <button
               type="button"
-              onClick={handleChange}
+              onClick={handleSearch}
               disabled={loading} // Disable the button when loading
               className={`text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 ${
                 loading

@@ -48,6 +48,21 @@ const SideBar = () => {
           </ListItemIcon>
           <ListItemText primary="Classes" />
         </ListItemButton>
+
+        <ListItemButton component={Link} to="/Admin/academicYear">
+          <ListItemIcon>
+            <ClassOutlinedIcon
+              color={
+                location.pathname.startsWith("/Admin/academicYear")
+                  ? "primary"
+                  : "inherit"
+              }
+            />
+          </ListItemIcon>
+
+          <ListItemText primary="Academic Year" />
+        </ListItemButton>
+
         <ListItemButton component={Link} to="/Admin/subjects">
           <ListItemIcon>
             <AssignmentIcon
@@ -118,7 +133,7 @@ const SideBar = () => {
               }
             />
           </ListItemIcon>
-          <ListItemText primary="Complains" />
+          <ListItemText primary="Complaints" />
         </ListItemButton>
       </React.Fragment>
       <Divider sx={{ my: 1 }} />

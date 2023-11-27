@@ -73,7 +73,7 @@ const TeacherSideBar = () => {
               }
             />
           </ListItemIcon>
-          <ListItemText primary="Complain" />
+          <ListItemText primary="Complaint" />
         </ListItemButton>
       </React.Fragment>
       <Divider sx={{ my: 1 }} />

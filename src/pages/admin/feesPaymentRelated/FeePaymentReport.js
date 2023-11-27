@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import { getAllSclasses } from "../../redux/sclassRelated/sclassHandle";
-import { getAllStudents } from "../../redux/studentRelated/studentHandle";
+import { getAllSclasses } from "../../../redux/sclassRelated/sclassHandle";
+import { getAllStudents } from "../../../redux/studentRelated/studentHandle";
 import {
   getPaymentReport,
   getPaymentReportByClassId,
   getPaymentReportByTermAndClassId,
   studentPaymentReport,
-} from "../../redux/feesPaymentRelated/feesPaymentHandle";
+} from "../../../redux/feesPaymentRelated/feesPaymentHandle";
 
 const FeePaymentPage = () => {
   const [selectedTermFilter, setSelectedTermFilter] = useState("full");
@@ -34,9 +34,10 @@ const FeePaymentPage = () => {
     dispatch(getPaymentReport());
     // setClassList(sclassesList);
     // dispatch(getAllStudents(currentUser._id));
-  }, [currentUser._id, dispatch]);
+  }, []);
 
   console.log(paymentReport, "paymentReport");
+  console.log(paymentReportDetails, "paymentReportDetails");
   console.log(response, "response");
 
   // console.log(studentsList, "studentsList");
@@ -45,30 +46,6 @@ const FeePaymentPage = () => {
   useEffect(() => {
     const fetchPaymentReport = async () => {
       try {
-        let response;
-        // switch (selectedTermFilter) {
-        //   case "First":
-        //     response = await axios.get(`/${selectedClass}TermPayemntReport`);
-        //     break;
-        //   case "Second":
-        //     response = await axios.get(`${selectedClass}TermPayemntReport`);
-        //     break;
-        //   case "Full":
-        //     response = await axios.get(
-        //       `${selectedClass}/FullTermPayemntReport`,
-        //     );
-        //     break;
-        //   default:
-        //     response = await axios.get(`${selectedClass}`);
-        //     break;
-        // }
-
-        // console.log(
-        //   selectedTermFilter,
-        //   "selectedTermFilter",
-        //   selectedClass,
-        //   "selectedClass",
-        // );
         if (selectedTermFilter && selectedClass) {
           // If both filter and class are selected, combine the outcomes
           // response = await axios.get(
@@ -78,6 +55,8 @@ const FeePaymentPage = () => {
           dispatch(
             getPaymentReportByTermAndClassId(selectedTermFilter, selectedClass),
           );
+          setPaymentReport(paymentReport);
+          console.log(paymentReportDetails, "paymentReportDetails1");
         } else if (selectedTermFilter) {
           // response = await axios.get(
           //   `/${selectedClass}TermPayemntReport/${selectedTermFilter}`,
@@ -86,10 +65,16 @@ const FeePaymentPage = () => {
           dispatch(
             getPaymentReportByTermAndClassId(selectedTermFilter, "334444"),
           );
+
+          setPaymentReport(paymentReport);
+
+          console.log(paymentReportDetails, "paymentReportDetails2");
         } else if (selectedClass) {
           // response = await axios.get(`/${selectedClass}TermPayemntReport`);
           console.log("selectedClass");
           dispatch(getPaymentReportByTermAndClassId("22", selectedClass));
+          setPaymentReport(paymentReport);
+          console.log(paymentReportDetails, "paymentReportDetails3");
         } else {
           // response = await axios.get(`/FeePaymentReport`);
           console.log("else");
@@ -104,7 +89,13 @@ const FeePaymentPage = () => {
     };
 
     fetchPaymentReport().then((r) => console.log(r));
-  }, [selectedTermFilter, selectedClass, paymentReport, dispatch]);
+  }, [
+    selectedTermFilter,
+    selectedClass,
+    paymentReport,
+    dispatch,
+    paymentReportDetails,
+  ]);
 
   const handleSearch = useCallback(
     async (e) => {
@@ -128,6 +119,7 @@ const FeePaymentPage = () => {
     const { value } = e.target;
     setSearchQuery(value);
   };
+  let count = 1;
   return (
     <div className="mx-auto max-w-2xl p-4">
       <h1 className="text-2xl font-bold mb-4">Fee Payment Report</h1>
@@ -196,8 +188,8 @@ const FeePaymentPage = () => {
         >
           <option value="">All Classes</option>
           {sclassesList?.map((classItem) => (
-            <option key={classItem._id} value={classItem._id}>
-              {classItem.sclassName}
+            <option key={(count = count + 1)} value={classItem?._id}>
+              {classItem?.sclassName}
             </option>
           ))}
         </select>
@@ -217,19 +209,22 @@ const FeePaymentPage = () => {
           </tr>
         </thead>
         <tbody>
-          {paymentReport.map((student) => (
-            <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+          {paymentReport?.map((student) => (
+            <tr
+              key={(count = count + 1)}
+              className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
+            >
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
-                {student.student.name}
+                {student?.student.name}
               </th>
-              <th className="px-6 py-4">{student.student.idNumber}</th>
+              <th className="px-6 py-4">{student?.student?.idNumber}</th>
               <th className="px-6 py-4">
-                {student.amountPaid / 500 === 1
+                {student?.amountPaid / 500 === 1
                   ? "First Term"
-                  : student.amountPaid / 500 === 2
+                  : student?.amountPaid / 500 === 2
                   ? "Second Term"
                   : "Third Term"}
               </th>

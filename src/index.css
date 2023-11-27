@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS for the modal backdrop */
+.modal-backdrop {
+    @apply fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50;
+}
+
+/* CSS for the centered modal */
+.modal-content {
+    @apply bg-white p-4 rounded-lg shadow-md max-w-md text-center;
+}
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -23,6 +33,14 @@ a {
     --color-primary-variant: rgba(77, 181, 255, 0.4);
     --color-light: rgba(255, 255, 255, 0.6);
 }
+
+/*:root {*/
+/*    --color-bg: #1f1f38;*/
+/*    --color-bg-variant: #030334;*/
+/*    --color-primary: #b88012;*/
+/*    --color-primary-variant: rgba(77, 181, 255, 0.4);*/
+/*    --color-light: rgba(255, 255, 255, 0.6);*/
+/*}*/
 
 /* FORM */
 .register {
