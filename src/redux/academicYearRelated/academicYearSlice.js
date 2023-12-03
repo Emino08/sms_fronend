@@ -56,6 +56,7 @@ const initialState = {
   academicYearLoading: false,
   academicYearError: null,
   academicYearStatus: "idle",
+  academicYearMessage: "",
 };
 
 const academicyearSlice = createSlice({
@@ -70,8 +71,15 @@ const academicyearSlice = createSlice({
     academicYearSuccess: (state, action) => {
       state.academicYearLoading = false;
       state.academicYearError = null;
-      state.academicYearData = action.payload;
+      state.academicYearMessage = action.payload;
       state.academicYearStatus = "succeeded";
+
+    },
+    academicYearDetailsSuccess: (state, action) => {
+        state.academicYearLoading = false;
+        state.academicYearError = null;
+        state.academicYearData = action.payload;
+        state.academicYearStatus = "succeeded";
     },
     academicYearFailed: (state, action) => {
       state.academicYearLoading = false;
@@ -97,6 +105,9 @@ const academicyearSlice = createSlice({
     clearAcademicYearData: (state) => {
       state.academicYearData = [];
     },
+    clearStatusMessage: (state) => {
+        state.academicYearMessage = "";
+    }
   },
 });
 
@@ -108,6 +119,8 @@ export const {
   resetAcademicYearStatus,
   setAcademicYearData,
   clearAcademicYearData,
+    academicYearDetailsSuccess,
+    clearStatusMessage
 } = academicyearSlice.actions;
 
 export const academicYearReducer = academicyearSlice.reducer;

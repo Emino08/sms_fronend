@@ -1,34 +1,29 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import FeedBack from "../../../components/FeedBack";
 import { useDispatch, useSelector } from "react-redux";
-import { createAcademicYear } from "../../../redux/academicYearRelated/academicYearHandle";
+import {
+  createAcademicYear,
+  getAllAcademicYears,
+  setAcademicYear
+} from "../../../redux/academicYearRelated/academicYearHandle";
 
 const SelectAcademicYear = () => {
   const [selectedYear, setSelectedYear] = useState("Choose an academic year");
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch();
-  const { academicYearsList } = useSelector((state) => state.academicYear);
+  const academicYearState = useSelector((state) => state.academicYear);
+  const {academicYearStatus, academicYearMessage, academicYearLoading, academicYearError, academicYearData} = academicYearState;
+  const [message, setMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
 
-  const academicYears = ["2022/2023", "2023/2024", "2024/2025", "2025/2026"];
-  let date = {
-    studentId: "32770",
-    academicYearName: "2023/2024",
-    payments: [
-      {
-        paymentDate: "2023-10-30",
-        amountPaid: 500,
-        receiptNumber: "RC001",
-        paymentMethod: "Cash",
-      },
-    ],
-  };
+  const academicYears = academicYearData?.map(academicYear => academicYear.name);
 
   const handleCreateAcademicYear = () => {
     const currentYear = new Date().getFullYear();
     const nextYear = currentYear + 1;
     const newAcademicYear = `${currentYear}/${nextYear}`;
-    academicYears.push(newAcademicYear);
-    setSelectedYear(newAcademicYear);
+    dispatch(createAcademicYear({academicYearName:newAcademicYear}));
+    // setSelectedYear(newAcademicYear);
     setShowModal(true);
   };
 
@@ -37,14 +32,34 @@ const SelectAcademicYear = () => {
   };
 
   const handleSelectionChange = (e) => {
-    console.log(e.target.value);
-    dispatch(createAcademicYear({academicYearName:e.target.value}));
+    let academicYearName = e.target.value;
+    dispatch(setAcademicYear({academicYearName}));
     setSelectedYear(e.target.value);
     setShowModal(true); // Show the modal when the selection changes
   };
 
+  useEffect(() => {
+    if (academicYearLoading === false && academicYearMessage !== "" && academicYearStatus === "succeeded") {
+      setMessage(academicYearMessage);
+      setIsSuccess(true);
+
+
+    } else {
+        setMessage(academicYearError);
+        setIsSuccess(false);
+    }
+
+    }, [academicYearStatus, academicYearMessage, academicYearLoading, academicYearError]);
+
+  useEffect(() => {
+    dispatch(getAllAcademicYears());
+
+  });
+
+
   return (
     <div className="flex justify-center items-center h-screen">
+      
       <div className="bg-white p-4 rounded-lg shadow-md max-w-md w-full text-center">
         <label
           htmlFor="academicYears"
@@ -77,11 +92,33 @@ const SelectAcademicYear = () => {
       </div>
       {showModal && (
         <FeedBack
-          message="Academic year updated successfully"
-          isSuccess={true}
+          message={message}
+          isSuccess={isSuccess}
           onClose={handleModalClose}
         />
       )}
+
+
+      <div date-rangepicker className="flex items-center">
+        <div className="relative">
+          <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+            </svg>
+          </div>
+          <input name="start" type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start" />
+        </div>
+        <span className="mx-4 text-gray-500">to</span>
+        <div className="relative">
+          <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+            </svg>
+          </div>
+          <input name="end" type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end" />
+        </div>
+      </div>
+
     </div>
   );
 };
