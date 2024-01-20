@@ -60,11 +60,18 @@ export const getUserDetails = (id, address) => async (dispatch) => {
 
     try {
         const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/${address}/${id}`);
-        if (result.data) {
+        // if (result.data) {
+        //     console.log("result.data",result.data)
+        //     dispatch(doneSuccess(result.data));
+        // }
+        if (result.data.message) {
+            dispatch(getFailed(result.data.message));
+        } else {
             dispatch(doneSuccess(result.data));
         }
     } catch (error) {
-        dispatch(getError(error));
+        console.log("error",error.message)
+        dispatch(getError(error.message));
     }
 }
 

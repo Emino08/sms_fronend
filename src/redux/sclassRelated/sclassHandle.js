@@ -9,7 +9,8 @@ import {
     getFailedTwo,
     getSubjectsSuccess,
     getSubDetailsSuccess,
-    getSubDetailsRequest
+    getSubDetailsRequest,
+    getClassSubject
 } from './sclassSlice';
 
 export const getAllSclasses = (id, address) => async (dispatch) => {
@@ -40,6 +41,23 @@ export const getClassStudents = (id) => async (dispatch) => {
     } catch (error) {
         dispatch(getError(error));
     }
+}
+
+export const getClassSubjects = (classId,teacherId) => async (dispatch) => {
+    dispatch(getRequest());
+
+    try {
+        const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/ClassSubjects/${classId}/${teacherId}`);
+        console.log(result.data)
+        if (result.data.message) {
+            dispatch(getFailedTwo(result.data.message));
+        } else {
+            dispatch(getClassSubject(result.data));
+        }
+    } catch (error) {
+        dispatch(getError(error.message));
+    }
+
 }
 
 export const getClassDetails = (id, address) => async (dispatch) => {

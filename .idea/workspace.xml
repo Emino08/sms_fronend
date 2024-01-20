@@ -5,18 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99db1d61-8106-4374-b30f-fa3226b048cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/exam/ExamProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/teacher/TeacherClasses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/admin/academicYearRelated/AcademicYear.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/academicYearRelated/AcademicYear.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/academicYearRelated/academicYearHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/academicYearRelated/academicYearHandle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/academicYearRelated/academicYearSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/academicYearRelated/academicYearSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/exam/ExamDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/exam/ExamDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/exam/ExamPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/exam/ExamPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/exam/ExamSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/exam/ExamSideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/teacher/TeacherDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/teacher/TeacherDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/teacher/TeacherViewStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/teacher/TeacherViewStudent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sclassRelated/sclassHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sclassRelated/sclassHandle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sclassRelated/sclassSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sclassRelated/sclassSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/userRelated/userHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/userRelated/userHandle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,13 +57,17 @@
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/EMMANUEL KOROMA/Documents/venv&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/EMMANUEL KOROMA/Documents/Projects/eceo-backend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -86,6 +106,32 @@
       <workItem from="1701393456727" duration="347000" />
       <workItem from="1701463446295" duration="2345000" />
       <workItem from="1701523773014" duration="741000" />
+      <workItem from="1701647865654" duration="72000" />
+      <workItem from="1701648000862" duration="37000" />
+      <workItem from="1702891752168" duration="19000" />
+      <workItem from="1702891834986" duration="663000" />
+      <workItem from="1702895453308" duration="395000" />
+      <workItem from="1702941986124" duration="217000" />
+      <workItem from="1702942235878" duration="1192000" />
+      <workItem from="1702943896124" duration="137000" />
+      <workItem from="1703238533658" duration="91000" />
+      <workItem from="1703321090346" duration="55000" />
+      <workItem from="1703321244470" duration="9000" />
+      <workItem from="1703321280893" duration="216000" />
+      <workItem from="1703321520462" duration="438000" />
+      <workItem from="1703412900729" duration="362000" />
+      <workItem from="1703413510519" duration="1674000" />
+      <workItem from="1703712247270" duration="1183000" />
+      <workItem from="1703905473579" duration="1856000" />
+      <workItem from="1703908311674" duration="6000" />
+      <workItem from="1703908336954" duration="1703000" />
+      <workItem from="1703946943870" duration="2766000" />
+      <workItem from="1704323583432" duration="725000" />
+      <workItem from="1704324344370" duration="481000" />
+      <workItem from="1704327624142" duration="3626000" />
+      <workItem from="1704583600331" duration="121000" />
+      <workItem from="1705622797780" duration="4241000" />
+      <workItem from="1705708877077" duration="7748000" />
     </task>
     <servers />
   </component>

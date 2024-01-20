@@ -44,6 +44,7 @@ const TeacherViewStudent = () => {
     console.log(error);
   }
 
+  console.log("userDetails", userDetails,"currentUser", currentUser);
   const [sclassName, setSclassName] = useState("");
   const [studentSchool, setStudentSchool] = useState("");
   const [subjectMarks, setSubjectMarks] = useState("");
